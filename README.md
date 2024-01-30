@@ -44,13 +44,13 @@ Use the below steps to generate your own PUFs.
 ```
 
 ### 3. Pick the PUF design that is desired.
-Three basic delay PUF designs are currently avilable.  In order, these are APUF (1), BPUF (2), and ROPUF (3). By typing a 1, 2, or 3 and hitting enter, one can select their base PUF design.
+Three basic delay PUF designs are currently avilable.  In order, these are APUF (1), BPUF (2), and ROPUF (3). By typing a 1, 2, or 3 and hitting enter, one can select their base PUF design.	<br>
 *For the purpose of this tutorial, we will simply choose the APUF (1).*
 ```
 >*Type 1, 2, or 3:* 1
 ```
 ### 4. Choose whether the PUF will be a CycPUF or not.
-Here one can set whether the PUF to be generated will contain cycles for CycPUF behavior or if the PUF will remain an acyclic PUF.
+Here one can set whether the PUF to be generated will contain cycles for CycPUF behavior or if the PUF will remain an acyclic PUF.	<br>
 *For the purpose of this tutorial, we will choose to create a CycPUF (y).*
 ```
 >*Will this be a CycPUF?*
@@ -58,22 +58,21 @@ Here one can set whether the PUF to be generated will contain cycles for CycPUF 
 ```
 ### 5. Choose whether the PUF will have a multi-bit response or not.
 The size of the response vector can either take on the size of the challenge vector or may be a single-bit response.
-- NOTE: The smallest response size that the ROPUF may have is 2.
 *For the purpose of this tutorial, we will choose to have a multi-bit response (y).*
 ```
 >*Will this PUF have a multi-bit response?*
 >*Type (y)es or (n)o:* y
 ```
 ### 6. Choose the size of the challenge vector.
-The size of the challenge vector must be an integer of at least 1.
-- NOTE: The smallest challenge (and response) size that the ROPUF may have is 2 and must be an even number.
+The size of the challenge vector must be an integer of at least 1.	<br>
+- NOTE: The smallest challenge (and response) size that the ROPUF may have is 2 and must be an even number.	<br>
 *For the purpose of this tutorial, we will choose to have a challenge size of 45.*
 ```
 >*Enter the size of the Challenge vector (an integer):* 45
 ```
 ### 7. Choose the number of cycles.
-The number of cycles for a CycPUF must be an integer of at least 1 and cannot equal the challenge vector size.
-- NOTE: The minimum number of cycles that the ROPUF may have is 2 and must be an even number.  A CycROPUF with a challenge of 2 is not possible.
+The number of cycles for a CycPUF must be an integer of at least 1 and cannot equal the challenge vector size.	<br>
+- NOTE: The minimum number of cycles that the ROPUF may have is 2 and must be an even number.  A CycROPUF with a challenge of 2 is not possible.	<br>
 *For the purpose of this tutorial, we will choose to have 44 cycles.*
 ```
 >*Enter the number of cycles (an integer):* 44
