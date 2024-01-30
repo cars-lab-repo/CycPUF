@@ -12,23 +12,23 @@ The published paper in which we introduce the CycPUF is contained in this folder
 
 ### 2. Sample Dataset
 A sample dataset has been generated and is ready for use.  The layout is as follows:	<br>
-	- `multi_bit_APUF`: an acyclic APUF with 121-bit challenge and response size
-	- `multi_bit_BPUF`: an acyclic BPUF with 33-bit challenge and response size
-	- `multi_bit_CycAPUF`: a cyclic APUF with 45-bit challenge and response size, and 44 cycles
-	- `multi_bit_CycBPUF`: a cyclic BPUF with 15-bit challenge and response size, and 3 cycles
-	- `multi_bit_CycROPUF`: a cyclic ROPUF with 6-bit challenge and response size, and 6 cycles
-	- `multi_bit_ROPUF`: an acyclic ROPUF with 22-bit challenge and response size
-	- `one_bit_APUF`: an acyclic APUF with 243-bit challenge and single-bit response size
-	- `one_bit_BPUF`: an acyclic BPUF with 10-bit challenge and single-bit response size
-	- `one_bit_CycAPUF`: a cyclic APUF with 37-bit challenge, single-bit response size, and 25 cycles
-	- `one_bit_CycBPUF`: a cyclic BPUF with 51-bit challenge, single-bit response size, and 25 cycles
-	- `two_bit_CycROPUF`: a cyclic ROPUF with 14-bit challenge, two-bit response size, and 10 cycles
-	- `two_bit_ROPUF`: an acyclic ROPUF with 34-bit challenge, two-bit response size
+	- `multi_bit_APUF`: an acyclic APUF with 121-bit challenge and response size	<br>
+	- `multi_bit_BPUF`: an acyclic BPUF with 33-bit challenge and response size	<br>
+	- `multi_bit_CycAPUF`: a cyclic APUF with 45-bit challenge and response size, and 44 cycles	<br>
+	- `multi_bit_CycBPUF`: a cyclic BPUF with 15-bit challenge and response size, and 3 cycles	<br>
+	- `multi_bit_CycROPUF`: a cyclic ROPUF with 6-bit challenge and response size, and 6 cycles	<br>
+	- `multi_bit_ROPUF`: an acyclic ROPUF with 22-bit challenge and response size	<br>
+	- `one_bit_APUF`: an acyclic APUF with 243-bit challenge and single-bit response size	<br>
+	- `one_bit_BPUF`: an acyclic BPUF with 10-bit challenge and single-bit response size	<br>
+	- `one_bit_CycAPUF`: a cyclic APUF with 37-bit challenge, single-bit response size, and 25 cycles	<br>
+	- `one_bit_CycBPUF`: a cyclic BPUF with 51-bit challenge, single-bit response size, and 25 cycles	<br>
+	- `two_bit_CycROPUF`: a cyclic ROPUF with 14-bit challenge, two-bit response size, and 10 cycles	<br>
+	- `two_bit_ROPUF`: an acyclic ROPUF with 34-bit challenge, two-bit response size	<br>
 
 ### 3. Source
 Our source code is contained in this folder.  Here you will find two python files:	<br>
-	- `puf_defs`: a python module containing the module definitions for verilog code generation
-	- `puf_framework`: the main python file for PUF generation
+	- `puf_defs`: a python module containing the module definitions for verilog code generation	<br>
+	- `puf_framework`: the main python file for PUF generation	<br>
 
 ## B. Usage
 Use the below steps to generate your own PUFs.
