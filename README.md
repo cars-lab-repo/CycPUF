@@ -81,7 +81,9 @@ The number of cycles for a CycPUF must be an integer of at least 1 and cannot eq
 ```
 ### 8. The requested PUF has been generated.
 The PUF that we specified has been generated and can now be found in the `sources` directory.
-`>*You chose multi-bit response, cyclic APUF with a 45 bit Challenge vector. Your verilog files have been generated in the parent directory.`
+```
+>*You chose multi-bit response, cyclic APUF with a 45 bit Challenge vector. Your verilog files have been generated in the parent directory.
+```
 
 ## C. Citation
 ```
