@@ -47,21 +47,21 @@ Use the below steps to generate your own PUFs.
 Three basic delay PUF designs are currently avilable.  In order, these are APUF (1), BPUF (2), and ROPUF (3). By typing a 1, 2, or 3 and hitting enter, one can select their base PUF design.	<br>
 *For the purpose of this tutorial, we will simply choose the APUF (1).*
 ```
->*Type 1, 2, or 3:* 1
+>Type 1, 2, or 3: 1
 ```
 ### 4. Choose whether the PUF will be a CycPUF or not.
 Here one can set whether the PUF to be generated will contain cycles for CycPUF behavior or if the PUF will remain an acyclic PUF.	<br>
 *For the purpose of this tutorial, we will choose to create a CycPUF (y).*
 ```
->*Will this be a CycPUF?*
->*Type (y)es or (n)o:* y
+>Will this be a CycPUF?
+>Type (y)es or (n)o: y
 ```
 ### 5. Choose whether the PUF will have a multi-bit response or not.
 The size of the response vector can either take on the size of the challenge vector or may be a single-bit response.	<br>
 *For the purpose of this tutorial, we will choose to have a multi-bit response (y).*
 ```
 >*Will this PUF have a multi-bit response?*
->*Type (y)es or (n)o:* y
+>Type (y)es or (n)o: y
 ```
 ### 6. Choose the size of the challenge vector.
 The size of the challenge vector must be an integer of at least 1.	<br>
@@ -69,7 +69,7 @@ The size of the challenge vector must be an integer of at least 1.	<br>
 
 *For the purpose of this tutorial, we will choose to have a challenge size of 45.*
 ```
->*Enter the size of the Challenge vector (an integer):* 45
+>Enter the size of the Challenge vector (an integer): 45
 ```
 ### 7. Choose the number of cycles.
 The number of cycles for a CycPUF must be an integer of at least 1 and cannot equal the challenge vector size.	<br>
@@ -77,12 +77,12 @@ The number of cycles for a CycPUF must be an integer of at least 1 and cannot eq
 
 *For the purpose of this tutorial, we will choose to have 44 cycles.*
 ```
->*Enter the number of cycles (an integer):* 44
+>Enter the number of cycles (an integer): 44
 ```
 ### 8. The requested PUF has been generated.
 The PUF that we specified has been generated and can now be found in the `sources` directory.
 ```
->*You chose multi-bit response, cyclic APUF with a 45 bit Challenge vector. Your verilog files have been generated in the parent directory.
+>You chose multi-bit response, cyclic APUF with a 45 bit Challenge vector. Your verilog files have been generated in the current directory.
 ```
 
 ## C. Citation
