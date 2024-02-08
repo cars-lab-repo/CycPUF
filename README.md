@@ -1,10 +1,9 @@
 # CycPUF: Cyclic Physical Unclonable Function
-This repository contains This repository contains resources related to cyclic and acyclic puf generation.   </br>
+This repository contains This repository contains resources related to cyclic and acyclic PUF generation.   </br>
 [Michael Dominguez](https://github.com/M-A-D-007) & [Amin Rezaei](https://github.com/r3zaei) </br>
 ### Abstract
 
-Physical Unclonable Functions (PUFs) leverage manufacturing process imperfections that cause propagation delay discrepancies for the signals traveling along these paths. While PUFs can be used for device authentication and chip-specific key generation, strong PUFs have been shown to be vulnerable to machine learning modeling attacks. Although there is an impression that combinational circuits must be designed without any loops, cyclic combinational circuits have been shown to increase design security against hardware intellectual property theft. In this paper, we introduce feedback signals into traditional delay-based PUF designs such as arbiter PUF, ring oscillator PUF, and butterfly PUF to give them a wider range of possible output behaviors and thus an edge against modeling attacks. Based on our analysis, cyclic PUFs produce responses that can be binary, steady-state, oscillating, or pseudo-random under fixed challenges. The proposed cyclic PUFs are implemented in field programmable gate arrays, and their power and area overhead, in addition to functional metrics, are reported compared with their traditional counterparts. The security gain of the proposed cyclic PUFs is also shown against state-of-the-art attacks.
-
+Physical Unclonable Functions (PUFs) leverage manufacturing process imperfections that cause propagation delay discrepancies for the signals traveling along these paths. While PUFs can be used for device authentication and chip-specific key generation, strong PUFs have been shown to be vulnerable to machine learning modeling attacks. Although there is an impression that combinational circuits must be designed without any loops, cyclic combinational circuits have been shown to increase design security against hardware intellectual property theft. In this project, we introduce feedback signals into traditional delay-based PUF designs such as arbiter PUF, ring oscillator PUF, and butterfly PUF to give them a wider range of possible output behaviors and thus an edge against modeling attacks. Based on our analysis, cyclic PUFs produce responses that can be binary, steady-state, oscillating, or pseudo-random under fixed challenges.
 ## A. Contents 
  
 ### 1. Paper
@@ -45,7 +44,7 @@ Use the below steps to generate your own PUFs.
 
 ### 3. Pick the PUF design that is desired.
 Three basic delay PUF designs are currently avilable.  In order, these are APUF (1), BPUF (2), and ROPUF (3). By typing a 1, 2, or 3 and hitting enter, one can select their base PUF design.	<br>
-*For the purpose of this tutorial, we will simply choose the APUF (1).*
+*For the purpose of this tutorial, we will choose the APUF (1).*
 ```
 >Type 1, 2, or 3: 1
 ```
