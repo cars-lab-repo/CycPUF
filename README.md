@@ -1,5 +1,5 @@
 # CycPUF: Cyclic Physical Unclonable Function
-This repository contains This repository contains resources related to cyclic and acyclic PUF generation.   </br>
+This repository contains resources related to cyclic and acyclic PUF generation.   </br>
 [Michael Dominguez](https://github.com/M-A-D-007) & [Amin Rezaei](https://github.com/r3zaei) </br>
 ### Abstract
 
