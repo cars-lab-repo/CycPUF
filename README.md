@@ -88,12 +88,12 @@ The PUF that we specified has been generated and can now be found in the `source
 ```
 @INPROCEEDINGS{CycPUF,
   author={Dominguez, Michael and Rezaei, Amin},
-  booktitle={Proceedings of 27th Design, Automation & Test in Europe Conference & Exhibition (DATE)}, 
+  booktitle={2024 Design, Automation & Test in Europe Conference & Exhibition (DATE)}, 
   title={CycPUF: Cyclic Physical Unclonable Function}, 
   year={2024},
   volume={},
   number={},
-  pages={},
+  pages={1-6},
   doi={}
 }
 
