@@ -94,6 +94,6 @@ The PUF that we specified has been generated and can now be found in the `source
   volume={},
   number={},
   pages={1-6},
-  doi={}
+  doi={10.23919/DATE58400.2024.10546861}
 }
 
