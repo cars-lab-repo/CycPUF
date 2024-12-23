@@ -23,6 +23,9 @@ A sample dataset has been generated and is ready for use.  The layout is as foll
 	- `one_bit_CycBPUF`: a cyclic BPUF with 51-bit challenge, single-bit response size, and 25 cycles	<br>
 	- `two_bit_CycROPUF`: a cyclic ROPUF with 14-bit challenge, two-bit response size, and 10 cycles	<br>
 	- `two_bit_ROPUF`: an acyclic ROPUF with 34-bit challenge, two-bit response size	<br>
+ 	- `template_APUF`: a Template APUF with 22-bit challenge, single-bit response size, and 18 cycles	<br>
+	- `template_BPUF`: a Template BPUF with 19-bit challenge, single-bit response size, and 11 cycles	<br>
+	- `template_ROPUF`: a Template ROPUF with 120-bit challenge, two-bit response size, and 80 cycles	<br>
 
 ### 3. Source
 Our source code is contained in this folder.  Here you will find two python files:	<br>
@@ -49,11 +52,15 @@ Three basic delay PUF designs are currently avilable.  In order, these are APUF 
 >Type 1, 2, or 3: 1
 ```
 ### 4. Choose whether the PUF will be a CycPUF or not.
-Here one can set whether the PUF to be generated will contain cycles for CycPUF behavior or if the PUF will remain an acyclic PUF.	<br>
-*For the purpose of this tutorial, we will choose to create a CycPUF (y).*
+Here one can set whether the PUF to be generated will contain cycles for CycPUF/Template behavior or if the PUF will remain an acyclic PUF.	<br>
+*For the purpose of this tutorial, we will choose to create a CycPUF (2).*
 ```
->Will this be a CycPUF?
->Type (y)es or (n)o: y
+>Will this PUF be a CycPUF, or Template PUF?
+>    1. Acyclic please!
+>    2. ¡CycPUF por favor!
+>    3. I'd like a Template PUF!
+
+Type 1, 2, or 3: 2
 ```
 ### 5. Choose whether the PUF will have a multi-bit response or not.
 The size of the response vector can either take on the size of the challenge vector or may be a single-bit response.	<br>
