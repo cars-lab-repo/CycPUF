@@ -884,3 +884,166 @@ endmodule
     mux4_to_2Module()
     mux2_to_1Module()
     dffModule()
+
+def templateRopufTopModule(size_of, num_cyc):
+    preamble = f"""\
+// Template Ring Oscillator PUF (ROPUF)
+// Generated Verilog Code
+(* dont_touch = "yes" *)
+module template_ropuf(
+    input clk,
+    input [{size_of}:0] chal,
+    input enable,
+    input reset,
+    input [1:0] user,
+    output [{size_of}:0] resp
+    );
+
+    reg [{num_cyc}:0] cycle;
+    wire [{size_of}:0] muxOut;
+"""
+
+    body = f"""\
+    // Cycle Logic
+    always @(posedge clk) begin
+"""
+
+    for i in range(num_cyc):
+        body += f"        cycle[{i}] <= chal[{i}] ^ resp[{num_cyc - i}];\n"
+    body += f"    end\n\n"
+
+    body += f"""\
+    // Generate Cycles
+    genvar i;
+    generate
+        for (i = 0; i < {size_of + 1}; i = i + 1) begin : cycle_inst
+            wire xorOut, combOut, stateOut, oscOut;
+
+            comb cyc0(.in0(resp[i]), .in1(chal[i]), .out(combOut));
+            state cyc1(.in0(chal[i]), .in1(resp[i]), .out(stateOut));
+            osc cyc2(.in0(chal[i]), .in1(resp[i]), .out(oscOut));
+            assign xorOut = resp[i] ^ chal[i];
+            mux4_to_1 cycMux(.in({{xorOut, combOut, stateOut, oscOut}}), .out(muxOut[i]), .sel(user));
+        end
+    endgenerate
+
+    assign resp = cycle;
+
+endmodule
+"""
+
+    filename = "template_ropuf_top.v"
+    with open(filename, "w") as file:
+        file.write(preamble + body)
+
+    cycRopufModule(size_of)
+
+def templateApufTopModule(size_of, num_cyc):
+    preamble = f"""\
+// Template Arbiter PUF (APUF)
+// Generated Verilog Code
+(* dont_touch = "yes" *)
+module template_apuf(
+    input clk,
+    input [{size_of}:0] chal,
+    input enable,
+    input reset,
+    input [1:0] user,
+    output [{size_of}:0] resp
+    );
+
+    reg [{num_cyc}:0] cycle;
+    wire [{size_of}:0] muxOut;
+"""
+
+    body = f"""\
+    // Cycle Logic
+    always @(posedge clk) begin
+"""
+
+    for i in range(num_cyc):
+        body += f"        cycle[{i}] <= chal[{i}] ^ resp[{num_cyc - i}];\n"
+    body += f"    end\n\n"
+
+    body += f"""\
+    // Generate Cycles
+    genvar i;
+    generate
+        for (i = 0; i < {size_of + 1}; i = i + 1) begin : cycle_inst
+            wire xorOut, combOut, stateOut, arbOut;
+
+            comb cyc0(.in0(resp[i]), .in1(chal[i]), .out(combOut));
+            state cyc1(.in0(chal[i]), .in1(resp[i]), .out(stateOut));
+            arb cyc2(.in0(chal[i]), .in1(resp[i]), .out(arbOut));
+            assign xorOut = resp[i] ^ chal[i];
+            mux4_to_1 cycMux(.in({{xorOut, combOut, stateOut, arbOut}}), .out(muxOut[i]), .sel(user));
+        end
+    endgenerate
+
+    assign resp = cycle;
+
+endmodule
+"""
+
+    filename = "template_apuf_top.v"
+    with open(filename, "w") as file:
+        file.write(preamble + body)
+
+    apufModule(size_of)
+    mux4_to_2Module()
+    mux2_to_1Module()
+    dffModule()
+
+def templateBpufTopModule(size_of, num_cyc):
+    preamble = f"""\
+// Template Butterfly PUF (BPUF)
+// Generated Verilog Code
+(* dont_touch = "yes" *)
+module template_bpuf(
+    input clk,
+    input [{size_of}:0] chal,
+    input enable,
+    input reset,
+    input [1:0] user,
+    output [{size_of}:0] resp
+    );
+
+    reg [{num_cyc}:0] cycle;
+    wire [{size_of}:0] muxOut;
+"""
+
+    body = f"""\
+    // Cycle Logic
+    always @(posedge clk) begin
+"""
+
+    for i in range(num_cyc):
+        body += f"        cycle[{i}] <= chal[{i}] ^ resp[{num_cyc - i}];\n"
+    body += f"    end\n\n"
+
+    body += f"""\
+    // Generate Cycles
+    genvar i;
+    generate
+        for (i = 0; i < {size_of + 1}; i = i + 1) begin : cycle_inst
+            wire xorOut, combOut, stateOut, bpufOut;
+
+            comb cyc0(.in0(resp[i]), .in1(chal[i]), .out(combOut));
+            state cyc1(.in0(chal[i]), .in1(resp[i]), .out(stateOut));
+            bpuf cyc2(.in0(chal[i]), .in1(resp[i]), .out(bpufOut));
+            assign xorOut = resp[i] ^ chal[i];
+            mux4_to_1 cycMux(.in({{xorOut, combOut, stateOut, bpufOut}}), .out(muxOut[i]), .sel(user));
+        end
+    endgenerate
+
+    assign resp = cycle;
+
+endmodule
+"""
+
+    filename = "template_bpuf_top.v"
+    with open(filename, "w") as file:
+        file.write(preamble + body)
+
+    bpufModule()
+    dLatchModule()
